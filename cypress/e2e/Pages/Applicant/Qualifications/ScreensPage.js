@@ -16,28 +16,19 @@ export class Screen1Page {
     clickNext(){
         cy.contains('Next').click()
     }
-    
 }
-
 export class Screen2Page {
     enterStreetAddress(){
         cy.get('input[Placeholder="Start typing your street address"]').click()
         .type('Deutschland, Berlin, Berlin, 10117, Berlin, Mohrenstraße 37{enter}')
         cy.get('#ngb-typeahead-0-0').click()
     }
-
-
-
 }
-
 export class Screen3Page {
     selectNoDrinvigLicense(){
         cy.get('.wh-toggle--slider').click()
     }
-
-
 }
-
 export class Screen4Page {
 
     selectWeeklyAvailability(){
@@ -49,8 +40,7 @@ export class Screen4Page {
         //Sunday : Night Shift
         cy.get('#panel-2-header > .accordion-button').click()
         cy.contains('Night shift').click({force: true})
-    }
-    
+    }  
 }
 
 export class Screen5Page {
@@ -66,14 +56,11 @@ export class Screen5Page {
     cy.get(':nth-child(3) > .ng-untouched > .dropdown-container > .zero > .ng-select-container > .ng-arrow-wrapper').click()
     cy.contains('ADVANCED').click({force: true})
     }
-
-
 }
 
 export class Screen6Page {
     confirmEnteredData(){
         cy.contains('Make your profile outstanding').click()
     }
-
 }
 

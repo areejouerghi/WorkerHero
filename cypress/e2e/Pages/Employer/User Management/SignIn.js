@@ -36,7 +36,6 @@ export class SignIn{
         this.enterPassword('Sido')
         this.errorMessage()
         this.verifyNonRedirectToDashboard();
-
     }
     errorMessage() {
         cy.contains('Password is required').should('be.visible')

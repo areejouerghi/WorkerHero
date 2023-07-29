@@ -28,6 +28,5 @@ export class GeneralInformationPage{
     this.loginWithValidCredentials()
     this.checkComponents()
     
-    }
-    
+    } 
 }

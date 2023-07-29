@@ -18,7 +18,6 @@ export class LoginPage {
     loginWithInvalidEmail() {
         this.enterEmail('Test.com')
         cy.contains('Invalid email format').should('be.visible')
-
     }
     loginWithInvalidPassword() {
         this.enterEmail('areejouerghi2@gmail.com')
@@ -26,6 +25,4 @@ export class LoginPage {
         this.clickOnLoginButton()
         cy.contains('Invalid credentials').should('be.visible')
     }
-    
-
 }

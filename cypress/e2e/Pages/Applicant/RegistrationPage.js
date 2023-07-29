@@ -36,8 +36,6 @@ export class RegistrationPage {
     const digit = confirmationCode.charAt(index);
     cy.wrap($input).type(digit);
     })}
-    
-
 registerWithValidCredentials() {
     this.clickSignUpButton();
     this.enterName('name');

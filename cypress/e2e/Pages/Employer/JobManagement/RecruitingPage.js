@@ -84,7 +84,6 @@ addEducation(){
     cy.get('.education-form > .ng-dirty > .dropdown-container > .zero > .ng-select-container > .ng-arrow-wrapper').click();
     cy.contains('ACADEMIC').should('be.visible').click();
     cy.get('.grid-child.ng-pristine > .wh-s-checkbox--container > .wh-s-checkbox').click();
-
 }
 addDriverLicense(){
     //Driver License
@@ -93,7 +92,6 @@ addDriverLicense(){
     cy.get('ng-dropdown-panel').contains('A').click();
     cy.get('wh-s-input[formcontrolname="years"]').eq(1).type('2');
     cy.get('.license-form > .ng-untouched.ng-valid > .wh-s-checkbox--container > .wh-s-checkbox')
-
 }
 addCertificate(){
     //Certificate
