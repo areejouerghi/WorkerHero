@@ -2,16 +2,18 @@ export class LoginPage {
 
     enterEmail(email) {
     
-        cy.get('input[type="text"][placeholder="Enter your email"]').type(email)
+        
+        cy.get('.email-input > .wh-s-input--container > .wh-s-input').type(email)
+
     }
     enterPassword(password) {
-        cy.get('input[type="password"][placeholder="Enter your password"]').type(password)
+        cy.get('.password-input > .wh-s-input--container > .wh-s-input').type(password)
     }
     clickOnLoginButton() {
         cy.get('[variant="primary"] > .wh-s-button').click();
     }
     loginWithValidCredentials() {
-        this.enterEmail('areejouerghi2@gmail.com')
+        this.enterEmail('hamza.guizani77+111@gmail.com')
         this.enterPassword('Sido1234')
         this.clickOnLoginButton()
     }

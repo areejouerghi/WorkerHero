@@ -8,19 +8,19 @@ export class RegistrationPage {
     enterDetails(name,lastName,email,password,repeatPassword) {
         cy.log('Enter first name')
         cy.wait(2000)
-        cy.get('input[type="text"][placeholder="Enter your First Name"]').type(name)
+        cy.get('[formcontrolname="firstName"] > .wh-s-input--container > .wh-s-input').type(name)
         cy.wait(2000)
         cy.log('Enter last name')
         cy.wait(2000)
-        cy.get('input[type="text"][placeholder="Enter your Last Name"]').type(lastName)
+        cy.get('[formcontrolname="lastName"] > .wh-s-input--container > .wh-s-input').type(lastName)
         cy.wait(2000)
         cy.log('Enter email')
         cy.wait(2000)
-        cy.get('input[type="text"][placeholder="Enter your Email"]').type(email)
+        cy.get('[formcontrolname="email"] > .wh-s-input--container > .wh-s-input').type(email)
         cy.wait(2000)
         cy.log('Enter password')
         cy.wait(2000)
-        cy.get('input[type="password"][placeholder="Enter your Password"]').type(password)
+        cy.get('[formcontrolname="password"] > .wh-s-input--container > .wh-s-input').type(password)
         cy.wait(2000)
         cy.log('Repeat password')
         cy.wait(2000)
@@ -31,7 +31,7 @@ export class RegistrationPage {
 }
 register() {
     this.clickOnRegisterButton()
-    this.enterDetails('QA','Test','example2@gmail.com','Test1234','Test1234')
+    this.enterDetails('QA','Test','example3@gmail.com','Test1234','Test1234')
     
 }
 }

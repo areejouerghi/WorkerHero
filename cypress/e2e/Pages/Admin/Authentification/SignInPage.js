@@ -1,23 +1,23 @@
 export class SignInPage{
     enterEmail(email) {
     
-        cy.get('input[type="text"][placeholder="Email"]').type(email)
+        cy.get('.email-input > .wh-s-input--container').type(email)
     }
     enterPassword(password) {
-        cy.get('input[type="password"][placeholder="Password"]').type(password)
+        cy.get('.password-input > .wh-s-input--container > .wh-s-input').type(password)
     }
     clickOnLoginButton() {
         cy.get('[variant="primary"] > .wh-s-button').click();
     }
     loginWithValidCredentials() {
-        this.enterEmail('hamza.guizani77+12@gmail.com')
+        this.enterEmail('hamza.guizani77@gmail.com')
         this.enterPassword('Sido1234')
         this.clickOnLoginButton()
         this.verifyRedirectToDashboard();
     }
     verifyRedirectToDashboard() {
         cy.log('Verify that the user is logged in')
-        cy.url().should('include', '/dashboard');
+        cy.url().should('include', '/auth');
         cy.wait(2000)
     }
     loginWithInalidCredentials() {

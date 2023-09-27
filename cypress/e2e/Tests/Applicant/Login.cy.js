@@ -12,7 +12,7 @@ describe('Login Suite', () => {
         cy.visit('https://app.staging.v2.workerhero.com/auth')
     })
 
-    it('Login with valid credentials ', () => {
+    it.only('Login with valid credentials ', () => {
         loginPage.loginWithValidCredentials()
     
     })

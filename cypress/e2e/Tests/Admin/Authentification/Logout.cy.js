@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-import { SignInPage } from "../../Pages/Admin/SignInPage"
+import { SignInPage } from "../../../Pages/Admin/Authentification/SignInPage"
 
-import { LogoutPage } from "../../Pages/Admin/Logout"
+import { LogoutPage } from "../../../Pages/Admin/Authentification/Logout"
 
 const signIn = new SignInPage()
 
@@ -11,7 +11,7 @@ const logout = new LogoutPage()
 describe('Log Out Test', () => {
     beforeEach(() => {
         cy.log('Visit URL')
-        cy.visit('https://business.staging.v2.workerhero.com/auth')
+        cy.visit('https://admin.staging.v2.workerhero.com/auth')
     })
 
 it('Sign in then logout', () => {
