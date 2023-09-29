@@ -22,4 +22,16 @@ describe('Create a new company test', () => {
         signIn.loginWithValidCredentials()
         companies.createCompany()
     })
+    it('Edit a company', () => {
+
+        signIn.loginWithValidCredentials()
+        companies.editCompany()
+    })
+
+    it.only('Delete a company', () => {
+            
+            signIn.loginWithValidCredentials()
+            companies.deleteCompany()
+        })
+
 })
