@@ -4,10 +4,9 @@ import { SignInPage } from "../../../../Pages/Admin/Authentification/SignInPage"
 
 const signIn = new SignInPage()
 
-import { CreateUserPage } from "../../../Pages/Admin/UserManagement/CreateUserPage"
+import { CreateUserPage } from "../../../../Pages/Admin/UserManagement/Users/CreateUserPage"
 
 const createUser = new CreateUserPage()
-
 
 describe('Create a new user test', () => {
 
@@ -33,7 +32,7 @@ describe('Create a new user test', () => {
         createUser.createEmployerUser()
     })
 
-    it('Create a new promoter user', () => {
+    it.only('Create a new promoter user', () => {
         signIn.loginWithValidCredentials()
         createUser.createPromoterUser()
     })

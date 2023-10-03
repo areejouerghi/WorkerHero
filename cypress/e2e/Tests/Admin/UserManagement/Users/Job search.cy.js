@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { SignInPage } from "../../../../Pages/Admin/Authentification/SignInPage"
+import { SignInPage } from "../../../../Pages/Admin/UserManagement/SignInPage"
 
 const signIn = new SignInPage()
 

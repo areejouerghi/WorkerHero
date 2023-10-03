@@ -101,10 +101,10 @@ export class CreateUserPage {
         cy.get('.wrapper.left > .md > .dropdown-container > .default > .ng-select-container > .ng-arrow-wrapper').click();
         cy.wait(2000)
         cy.log('Pick Angola')
-        cy.get('div.ng-option:contains("Angola")').click();
+        cy.get('div.ng-option:contains("Tunisia")').click();
         cy.wait(2000)
         cy.log('Phone')
-        cy.get('.right > .md > .wh-s-input--container > .wh-s-input').type('12345678')
+        cy.get('.right > .md > .wh-s-input--container > .wh-s-input').type('52668548')
         cy.wait(2000)
         cy.log('Click on Submit Button')
         cy.contains('Submit').click();

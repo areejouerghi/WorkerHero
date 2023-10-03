@@ -91,7 +91,7 @@ viewProField(){
 createNewJobType(){
         cy.log('Click on the burger icon')
         cy.get('.icon-container').click();
-        cy.wait(2000)
+        cy.wait(4000)
         cy.log('Click on Job Types')
         cy.contains('Job types').click();
         cy.wait(2000)

@@ -2,13 +2,13 @@
 
 import { SignInPage } from "../../../Pages/Admin/Authentification/SignInPage"
 
-import { ProfessionalFieldsPage } from "../../../Pages/Admin/Professional Fields/CreateJob"
+import { ProfessionalFieldsPage } from "../../../Pages/Admin/Professional Fields/Jobs&JobTypes"
 
 const signIn = new SignInPage()
 
 const professionalFields = new ProfessionalFieldsPage()
 
-describe('Professional fields & Job Types', () => {
+describe('Jobs & Job Types', () => {
     beforeEach(() => {
         cy.log('Visit URL')
         cy.visit('https://admin.staging.v2.workerhero.com/auth')
