@@ -44,7 +44,7 @@ export class PromotionsPage{
         cy.get('.action-wrapper > .ng-tns-c2720209522-3 > button').click();
         cy.wait(2000)
         cy.log('Enter the ID of the promoter')
-        cy.get('[formcontrolname="V1jobId"] > .wh-s-input--container > .wh-s-input').type('11');
+        cy.get('[formcontrolname="V1jobId"] > .wh-s-input--container > .wh-s-input').type('2000');
         cy.wait(2000)
         cy.log('Enter the percentage')
         cy.get('[formcontrolname="percentage"] > .wh-s-input--container > .wh-s-input').type('75');
@@ -60,7 +60,7 @@ export class PromotionsPage{
         cy.wait(2000)
         cy.log('Select the promotion')
         cy.get('[formcontrolname="promoters"] > .dropdown-container > .default > .ng-select-container > .ng-arrow-wrapper').click();
-        cy.contains('sign').click();
+        cy.contains('areej').click();
         cy.log('Click on the create promotion button')
         cy.get('[variant="primary"] > .wh-s-button').click();
         cy.wait(4000)
@@ -116,6 +116,30 @@ export class PromotionsPage{
         cy.log('Click on the delete button')
         cy.get('.delete-btn > .wh-s-button').click();
         cy.wait(8000)
+        }
+        viewMyPromotions(){
+            cy.log('Click on the burger icon')
+            cy.get('.icon-container').click();
+            cy.wait(2000)
+            cy.log('Click on My Promotions')
+            cy.get(':nth-child(2) > .wrapper > .item-list-wrapper > :nth-child(1) > .item-wrapper').click();
+            cy.wait(4000)
+            cy.get('main').scrollTo('bottom')
+            cy.wait(3000)
+        }
+        shareMyPromotions(){
+            cy.log('Click on the burger icon')
+            cy.get('.icon-container').click();
+            cy.wait(2000)
+            cy.log('Click on My Promotions')
+            cy.get(':nth-child(2) > .wrapper > .item-list-wrapper > :nth-child(1) > .item-wrapper').click();
+            cy.wait(4000)
+            cy.get('main').scrollTo('bottom')
+            cy.wait(3000)
+            cy.log('Click on Share Now')
+            cy.get('.wh-s-button').click();
+            cy.wait(4000)
+
         }
 
 

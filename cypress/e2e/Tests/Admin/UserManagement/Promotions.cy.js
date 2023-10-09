@@ -27,7 +27,7 @@ it('Verify information of a promotion', () => {
     promotion.verifyPromotions()
 })
 
-it('Create a promotion', () => {
+it.only('Create a promotion', () => {
         
         signIn.loginWithValidCredentials()
         promotion.createPromotions()
@@ -39,7 +39,7 @@ it('Edit a promotion', () => {
     promotion.editPromotions()
 })
 
-it.only('Delete a promotion', () => {
+it('Delete a promotion', () => {
 
     signIn.loginWithValidCredentials()
     promotion.deletePromotions()
