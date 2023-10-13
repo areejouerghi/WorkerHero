@@ -60,7 +60,7 @@ export class PromotionsPage{
         cy.wait(2000)
         cy.log('Select the promotion')
         cy.get('[formcontrolname="promoters"] > .dropdown-container > .default > .ng-select-container > .ng-arrow-wrapper').click();
-        cy.contains('areej').click();
+        cy.contains('10006').click();
         cy.log('Click on the create promotion button')
         cy.get('[variant="primary"] > .wh-s-button').click();
         cy.wait(4000)
@@ -137,8 +137,47 @@ export class PromotionsPage{
             cy.get('main').scrollTo('bottom')
             cy.wait(3000)
             cy.log('Click on Share Now')
-            cy.get('.wh-s-button').click();
+            cy.get(':nth-child(1) > .card > .cta-btn > .wh-s-button').click();
             cy.wait(4000)
+
+        }
+        verifyMyPromotions(){
+            cy.log('Click on the burger icon')
+            cy.get('.icon-container').click();
+            cy.wait(2000)
+            cy.log('Click on My Promotions')
+            cy.get(':nth-child(2) > .wrapper > .item-list-wrapper > :nth-child(1) > .item-wrapper').click();
+            cy.wait(4000)
+            cy.get('main').scrollTo('bottom')
+            cy.log('Verify the information of the promotion')
+            cy.log('Verify company name')
+            cy.get('.company-name').should('contain', 'Food')
+            cy.wait(2000)
+            cy.log('Verify bonus')
+            cy.get('.bonus-amount').should('contain', '86')
+            cy.wait(2000)
+            cy.log('Verify address')
+            cy.get('.address').should('contain', '60325, Frankfurt am Main')
+            cy.wait(3000)
+
+        }
+        applyPromotion(){
+            cy.log('Redirection to V1 app upon applying')
+            cy.contains('Apply ').click();
+            cy.wait(20000)
+
+        }
+        partacipateInPromotion(){
+            cy.log('Click on the burger icon')
+            cy.get('.icon-container').click();
+            cy.wait(2000)
+            cy.log('Click on All promotions')
+            cy.get(':nth-child(2) > .item-wrapper').click();
+            cy.wait(4000)
+            cy.log('Click on Let\'s go')
+            cy.contains('Let\'s go').click();
+            cy.wait(4000)
+            
 
         }
 

@@ -10,8 +10,8 @@ export class SignInPage{
         cy.get('[variant="primary"] > .wh-s-button').click();
     }
     loginWithValidCredentials() {
-        this.enterEmail('areejouerghi2@gmail.com')
-        this.enterPassword('pass@2023')
+        this.enterEmail('hamza.guizani77+10006@gmail.com')
+        this.enterPassword('Sido1234')
         this.clickOnLoginButton()
         this.verifyRedirectToDashboard();
     }

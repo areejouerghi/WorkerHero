@@ -8,24 +8,20 @@ import { PromotionsPage } from "../../../Pages/Admin/UserManagement/PromotionsPa
 
 const promotion = new PromotionsPage()
 
-describe('My Promotions Suite', () => {
+describe('Promotion Sharing', () => {
     beforeEach(() => {
         cy.log('Visit URL')
         cy.visit('https://promo.staging.v2.workerhero.com/auth')
     })
 
-  it("View all promotions of a promoter", () => {
+  it("Redirection to V1 app upon applying", () => {
     signIn.loginWithValidCredentials();
-    promotion.viewMyPromotions();
-  })
-it.only('Verify information of a promotion', () => {
-    
-    signIn.loginWithValidCredentials()
-    promotion.verifyMyPromotions()
-})
-  it("Share information of a promotion", () => {
-    signIn.loginWithValidCredentials();
-    cy.wait(2000)
     promotion.shareMyPromotions();
-  });
+    promotion.applyPromotion();
+  })
+  it.only('Participate in promotion with existing account', () => {
+    signIn.loginWithValidCredentials();
+    promotion.partacipateInPromotion();
+    
+  })
 });
