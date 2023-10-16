@@ -4,21 +4,17 @@ import { SignInPage } from "../../../Pages/Promoter/Authentification/SignInPage"
 
 const signIn = new SignInPage()
 
-describe('Sign in suite', () => {
+import { ResetPassword } from "../../../Pages/Promoter/Authentification/ResetPasswordPage"
+
+const resetPassword = new ResetPassword()
+
+describe('Reset your password', () => {
     beforeEach(() => {
         cy.log('Visit URL')
         cy.visit('https://promo.staging.v2.workerhero.com/auth')
     })
 
-it('Sign in with valid credentials', () => {
-    
-    signIn.loginWithValidCredentials()
-
-});
-
-it.only('Sign in with Invalid Email Format', () => {
-    
-    signIn.loginWithInvalidEmail()
-
-});
+    it('Reset your password', () => {
+        resetPassword.resetPassword()
+    })
 })

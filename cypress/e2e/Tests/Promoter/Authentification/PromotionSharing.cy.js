@@ -14,7 +14,7 @@ describe('Promotion Sharing', () => {
         cy.visit('https://promo.staging.v2.workerhero.com/auth')
     })
 
-  it("Redirection to V1 app upon applying", () => {
+  it.only("Redirection to V1 app upon applying", () => {
     signIn.loginWithValidCredentials();
     promotion.shareMyPromotions();
     promotion.applyPromotion();
