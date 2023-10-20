@@ -6,7 +6,7 @@ export class RegistrationPage{
         cy.log('Enter lastname')
         cy.get('.lastname-input > .wh-s-input--container > .wh-s-input').type('Test')
         cy.log('Enter email')
-        cy.get('.email-input > .wh-s-input--container > .wh-s-input').type('hamza.guizani77+115@gmail.com')
+        cy.get('.email-input > .wh-s-input--container > .wh-s-input').type('test+1@gmail.com')
         cy.log('Select language')
         cy.get('.communication-language > .dropdown-container > .default > .ng-select-container > .ng-arrow-wrapper').click()
         cy.contains('English').click()

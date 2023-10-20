@@ -10,13 +10,13 @@ describe('Sign in suite', () => {
         cy.visit('https://promo.staging.v2.workerhero.com/auth')
     })
 
-it('Sign in with valid credentials', () => {
+it.only('Sign in with valid credentials', () => {
     
     signIn.loginWithValidCredentials()
 
 });
 
-it.only('Sign in with Invalid Email Format', () => {
+it('Sign in with Invalid Email Format', () => {
     
     signIn.loginWithInvalidEmail()
 
